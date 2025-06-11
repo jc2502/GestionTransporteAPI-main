@@ -1,6 +1,6 @@
 const { sql, poolPromise } = require('../../../sqlserver');
 
-class UsuariosService {
+class AuthService {
     static async login(email, password) {
         const pool = await poolPromise;
         const result = await pool.request()
@@ -67,4 +67,4 @@ class UsuariosService {
     }
 }
 
-module.exports = UsuariosService;
+module.exports = AuthService;
